@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/IMWeChat/IMWeChat.iml" filepath="$PROJECT_DIR$/IMWeChat/IMWeChat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NIO/NIO.iml" filepath="$PROJECT_DIR$/NIO/NIO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NIOClient/NIOClient.iml" filepath="$PROJECT_DIR$/NIOClient/NIOClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NettyWebSocketUrl/NettyWebSocketUrl.iml" filepath="$PROJECT_DIR$/NettyWebSocketUrl/NettyWebSocketUrl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServerNetty/ServerNetty.iml" filepath="$PROJECT_DIR$/ServerNetty/ServerNetty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SocketToWebSocket/SocketToWebSocket.iml" filepath="$PROJECT_DIR$/SocketToWebSocket/SocketToWebSocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TcpAndWebSocket/TcpAndWebSocket.iml" filepath="$PROJECT_DIR$/TcpAndWebSocket/TcpAndWebSocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/WebSocketClient/WebSocketClient.iml" filepath="$PROJECT_DIR$/WebSocketClient/WebSocketClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aiguiguNetty/aiguiguNetty.iml" filepath="$PROJECT_DIR$/aiguiguNetty/aiguiguNetty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/businessClient/businessClient.iml" filepath="$PROJECT_DIR$/businessClient/businessClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dianji.iml" filepath="$PROJECT_DIR$/dianji.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dianjiNettyClient/dianjiNettyClient.iml" filepath="$PROJECT_DIR$/dianjiNettyClient/dianjiNettyClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dianjiNettyServer/dianjiNettyServer.iml" filepath="$PROJECT_DIR$/dianjiNettyServer/dianjiNettyServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hexNettyServer/hexNettyServer.iml" filepath="$PROJECT_DIR$/hexNettyServer/hexNettyServer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moudle1/moudle1.iml" filepath="$PROJECT_DIR$/moudle1/moudle1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moudle2/moudle2.iml" filepath="$PROJECT_DIR$/moudle2/moudle2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty/netty.iml" filepath="$PROJECT_DIR$/netty/netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nettyClient/nettyClient.iml" filepath="$PROJECT_DIR$/nettyClient/nettyClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nettyserver/nettyserver.iml" filepath="$PROJECT_DIR$/nettyserver/nettyserver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/protobufTest1/protobufTest1.iml" filepath="$PROJECT_DIR$/protobufTest1/protobufTest1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/websocket/websocket.iml" filepath="$PROJECT_DIR$/websocket/websocket.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,5 @@
+server:
+  port: 8080
+netty:
+  WebSocketPort: 1254
+  SocketPort: 22200

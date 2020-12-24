@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/IMWeChat/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/NIO/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/NIOClient/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/NettyWebSocketUrl/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ServerNetty/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SocketToWebSocket/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/TcpAndWebSocket/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/WebSocketClient/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/aiguiguNetty/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/businessClient/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dianjiNettyClient/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dianjiNettyServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hexNettyServer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/moudle1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/moudle2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/netty/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nettyClient/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nettyserver/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/protobufTest1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/websocket/src/main/java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

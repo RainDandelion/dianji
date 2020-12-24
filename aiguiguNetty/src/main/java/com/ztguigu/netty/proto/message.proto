@@ -1,0 +1,12 @@
+syntax = "proto3"; //版本
+//定义protobuf的包名称空间
+option java_package="com.ztguigu.netty.proto";
+// 消息体名称
+option java_outer_classname="ProtoMsg";
+message Frame {
+  string messageName = 1;
+  bytes payload = 15;
+}
+message TextMessage {
+  string text = 1;
+}
