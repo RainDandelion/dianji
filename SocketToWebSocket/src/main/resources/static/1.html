@@ -43,11 +43,20 @@
     }
 
     function send(message) {
+        var local = window.location.host;
 
+        console.log(local);
         if(websocket){
             if(websocket.readyState==WebSocket.OPEN){
                 console.log("通过websocket发送消息");
-                websocket.send(message);
+                //websocket.send(message);
+                //document.getElementById('text').value;
+                var msg =  {
+                    id : 1,
+                    dir: message
+                }
+
+                websocket.send(JSON.stringify(msg));
             }
         }else{
             alert("未建立websocket连接");
@@ -57,6 +66,9 @@
 
 <form onsubmit="return false;">
     <input type="text" name="message" value="Netty实践"/>
+
+    <button onclick="send(1)">左</button>
+    <button onclick="send(0)">右</button>
     <br><br>
     <input type="button" value="发送消息" onclick="send (this.form.message.value)"/>
     <h3>应答消息</h3>

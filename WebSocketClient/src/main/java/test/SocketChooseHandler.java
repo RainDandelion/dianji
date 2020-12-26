@@ -14,7 +14,7 @@ import java.util.List;
  * 协议初始化解码器. *
  * 用来判定实际使用什么协议.</b> *
  */
-//@Component
+//@Component,
 //public class SocketChooseHandler extends ByteToMessageDecoder {
 //    /** 默认暗号长度为23 */
 //    private static final int MAX_LENGTH = 23;

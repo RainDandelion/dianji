@@ -16,8 +16,8 @@ public class CloudApplication implements CommandLineRunner {
     private String host;
     @Value("${netty.port}")
     private int port;
-//    @Autowired
-//    private NettyServer2 nettyServer;
+    @Autowired
+    private NettyServer2 nettyServer;
 
     @Autowired
     private NettyServer server;
@@ -27,7 +27,7 @@ public class CloudApplication implements CommandLineRunner {
 
     @Override
     public void run(String... strings) {
-        //nettyServer.start(new InetSocketAddress(host,port));
-        server.start(new InetSocketAddress(host,port));
+        nettyServer.start(new InetSocketAddress(host,port));
+//        server.start(new InetSocketAddress(host,port));
     }
 }

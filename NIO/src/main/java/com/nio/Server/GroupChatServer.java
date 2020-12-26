@@ -175,9 +175,10 @@ public class GroupChatServer implements InitializingBean {
 
 
                 //String temp = "f5 05 02 01 00 02 ff ff ff ff ff ff 12";
-                ByteBuffer writeBuffer = ByteBuffer.allocate(msg.length);
-                writeBuffer.put(msg);
-                writeBuffer.flip();
+                //ByteBuffer writeBuffer = ByteBuffer.allocate(msg.length);
+                ByteBuffer writeBuffer=ByteBuffer.wrap(new byte[]{(byte) 0xf5,0x05,0x02,1,0,2, (byte) 0xff, (byte) 0xff, (byte) 0xff, (byte) 0xff, (byte) 0xff, (byte) 0xff,0x10});
+
+                writeBuffer.rewind();
                 dest.write(writeBuffer);
 
             }

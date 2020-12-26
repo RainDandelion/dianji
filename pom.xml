@@ -26,6 +26,7 @@
         <module>NettyWebSocketUrl</module>
         <module>protobufTest1</module>
         <module>TcpAndWebSocket</module>
+        <module>ServerCamrea</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

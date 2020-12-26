@@ -1,0 +1,34 @@
+server:
+  port: 10001
+  tomcat:
+    uri-encoding: UTF-8
+test: data
+devtools:
+  restart:
+    #热部署生效
+    enabled: true
+    #设置重启的目录
+#    additional-paths: resources/**,static/**,templates/**
+    #该目录下的内容修改不重启
+#    exclude: data/**
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    #开发时关闭缓存，发布后打开缓存
+    cache: false
+devices:
+  port: 22200
+#  安装位置
+  left: 5
+  right: 4
+#左转方向
+  dir: 1
+  list:
+    - 123
+    - 123
+    - 123
+    - 123
+  devicelist:
+    - {cameraIp: '10.10.10.36', motoIp: '10.10.10.123'}
+    - {cameraIp: '10.10.10.35', motoIp: '10.10.10.113'}
+    - {cameraIp: '10.10.10.41', motoIp: '10.10.10.113'}

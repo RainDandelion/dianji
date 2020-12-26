@@ -45,7 +45,13 @@
         websocket.close(3000,"强制关闭");
     }
     function send(){
-        var msg = document.getElementById('text').value;
+        //document.getElementById('text').value;
+        var msg =  document.getElementById('text').value;
+        //     {
+        //     id : 1,
+        //     test: "1246"
+        // }
+         //   JSON.stringify(msg)
         websocket.send(msg);
     }
 </script>

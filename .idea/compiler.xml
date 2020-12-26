@@ -9,21 +9,22 @@
         <module name="businessClient" />
         <module name="NIOClient" />
         <module name="ServerNetty" />
-        <module name="IMWeChat" />
         <module name="WebSocketClient" />
         <module name="demo" />
+        <module name="dianjiNettyServer" />
         <module name="websocket" />
         <module name="netty" />
         <module name="dianjiNettyClient" />
-        <module name="moudle2" />
         <module name="nettyClient" />
         <module name="SocketToWebSocket" />
         <module name="TcpAndWebSocket" />
+        <module name="protobufTest1" />
         <module name="hexNettyServer" />
-        <module name="dianjiNettyServer" />
+        <module name="ServerCamrea" />
+        <module name="IMWeChat" />
         <module name="NIO" />
         <module name="NettyWebSocketUrl" />
-        <module name="protobufTest1" />
+        <module name="moudle2" />
         <module name="moudle1" />
         <module name="aiguiguNetty" />
         <module name="common" />
@@ -50,6 +51,7 @@
       <module name="NIO" target="1.8" />
       <module name="NIOClient" target="1.8" />
       <module name="protobufTest1" target="1.8" />
+      <module name="ServerCamrea" target="1.8" />
       <module name="ServerNetty" target="1.8" />
       <module name="SocketToWebSocket" target="1.8" />
       <module name="TcpAndWebSocket" target="1.8" />
@@ -63,6 +65,7 @@
       <module name="NIO" options="-parameters" />
       <module name="NIOClient" options="-parameters" />
       <module name="NettyWebSocketUrl" options="-parameters" />
+      <module name="ServerCamrea" options="-parameters" />
       <module name="ServerNetty" options="-parameters" />
       <module name="SocketToWebSocket" options="-parameters" />
       <module name="TcpAndWebSocket" options="-parameters" />

@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/NIO/NIO.iml" filepath="$PROJECT_DIR$/NIO/NIO.iml" />
       <module fileurl="file://$PROJECT_DIR$/NIOClient/NIOClient.iml" filepath="$PROJECT_DIR$/NIOClient/NIOClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/NettyWebSocketUrl/NettyWebSocketUrl.iml" filepath="$PROJECT_DIR$/NettyWebSocketUrl/NettyWebSocketUrl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ServerCamrea/ServerCamrea.iml" filepath="$PROJECT_DIR$/ServerCamrea/ServerCamrea.iml" />
       <module fileurl="file://$PROJECT_DIR$/ServerNetty/ServerNetty.iml" filepath="$PROJECT_DIR$/ServerNetty/ServerNetty.iml" />
       <module fileurl="file://$PROJECT_DIR$/SocketToWebSocket/SocketToWebSocket.iml" filepath="$PROJECT_DIR$/SocketToWebSocket/SocketToWebSocket.iml" />
       <module fileurl="file://$PROJECT_DIR$/TcpAndWebSocket/TcpAndWebSocket.iml" filepath="$PROJECT_DIR$/TcpAndWebSocket/TcpAndWebSocket.iml" />
