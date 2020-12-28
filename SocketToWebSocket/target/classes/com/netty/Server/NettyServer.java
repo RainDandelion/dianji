@@ -71,6 +71,7 @@ public class NettyServer {
     ServerBootstrap serverSocketBootstrap = new ServerBootstrap();
     ServerBootstrap serverWebSocketBootstrap = new ServerBootstrap();
 
+
     @Value("${netty.SocketPort}")
     private Integer SocketPort;
     @Value("${netty.WebSocketPort}")

@@ -7,15 +7,15 @@ import io.netty.util.concurrent.GlobalEventExecutor;
 /**
  * websocket
  */
-public class GlobalWebChannelGroup {
-    private GlobalWebChannelGroup(){
-
-    }
-
-    public static ChannelGroup INSTANCE = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
-
-
-    public static ChannelGroup getINSTANCE() {
-        return INSTANCE;
-    }
-}
+//public class GlobalWebChannelGroup {
+//    private GlobalWebChannelGroup(){
+//
+//    }
+//
+//    public static ChannelGroup INSTANCE = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
+//
+//
+//    public static ChannelGroup getINSTANCE() {
+//        return INSTANCE;
+//    }
+//}

@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.netty.Group.GlobalChannelGroup;
 import com.netty.Group.GlobalWebChannelGroup;
+import com.netty.Group.SocketGroup;
+import com.netty.Group.WebSocketGroup;
 import com.netty.entity.UserInfo;
 import com.netty.utils.ConvertCode;
 import com.netty.utils.WriteToSocketClient;
@@ -21,8 +23,8 @@ import java.util.concurrent.ConcurrentHashMap;
 public class nettyWebServerHandler extends SimpleChannelInboundHandler<TextWebSocketFrame> {
 
     private Logger logger = LoggerFactory.getLogger(nettyWebServerHandler.class);
-    private static Map<String,Channel> map = new ConcurrentHashMap<>();
-    private ChannelGroup GlobalChannelGroupInstance = GlobalChannelGroup.getINSTANCE();  //电机客户端
+//    private static Map<String,Channel> map = new ConcurrentHashMap<>();
+//    private ChannelGroup GlobalChannelGroupInstance = GlobalChannelGroup.getINSTANCE();  //电机客户端
     private byte dirleft =0;
     private byte dirright =1;
     @Override
@@ -34,15 +36,42 @@ public class nettyWebServerHandler extends SimpleChannelInboundHandler<TextWebSo
 //        System.out.println(userInfo.getId());
 //        System.out.println(userInfo.getDir());
 
+//        /**
+//         * TODO
+//         * 移掉 ch的唯一值，将用户端id重新设置上去.
+//         */
+//        map.remove(ctx.channel().id().asLongText());
+//        map.put(userInfo.getId(),ctx.channel());
+//        //System.out.println(map.toString());
+//        /**
+//         * 获取移动的步伐
+//         */
+//        byte dir = userInfo.getDir();
+//        logger.info("当前连接数: {}",map.size());
+//        logger.info("原始报文-------：{}",message);
+//
+//        byte[] bytes = new byte[]{(byte) 0xf5,0x05,0x02,1,0,2, (byte) 0xff, (byte) 0xff, (byte) 0xff, (byte) 0xff, (byte) 0xff, (byte) 0xff,0x10};
+//        if (dir == 1){
+//            bytes[3] = this.dirleft;
+//        }else {
+//            bytes[3] = this.dirright;
+//        }
+//        System.out.println(GlobalChannelGroupInstance.toArray());
+//        GlobalChannelGroupInstance.forEach(channel -> {
+//            System.out.println(channel.toString());
+//            channel.writeAndFlush(Unpooled.copiedBuffer(bytes));
+//        });
         /**
          * TODO
          * 移掉 ch的唯一值，将用户端id重新设置上去.
          */
-        map.remove(ctx.channel().id().asLongText());
-        map.put(userInfo.getId(),ctx.channel());
-        //System.out.println(map.toString());
+        // WebSocketGroup.getInstance().replaceId(ctx.channel().id().asLongText(),userInfo.getId());
+        WebSocketGroup.getInstance().replaceId(ctx.channel(),userInfo.getId());
+        /**
+         * 获取移动的步伐
+         */
         byte dir = userInfo.getDir();
-        logger.info("当前连接数: {}",map.size());
+        logger.info("当前连接数: {}",WebSocketGroup.getInstance().CountWebChannel());
         logger.info("原始报文-------：{}",message);
 
         byte[] bytes = new byte[]{(byte) 0xf5,0x05,0x02,1,0,2, (byte) 0xff, (byte) 0xff, (byte) 0xff, (byte) 0xff, (byte) 0xff, (byte) 0xff,0x10};
@@ -51,11 +80,8 @@ public class nettyWebServerHandler extends SimpleChannelInboundHandler<TextWebSo
         }else {
             bytes[3] = this.dirright;
         }
-        System.out.println(GlobalChannelGroupInstance.toArray());
-        GlobalChannelGroupInstance.forEach(channel -> {
-            System.out.println(channel.toString());
-            channel.writeAndFlush(Unpooled.copiedBuffer(bytes));
-        });
+
+        SocketGroup.getInstance().sendMessage(bytes);
 //        ByteBuf byteBuf = UnpooledByteBufAllocator.DEFAULT.buffer(500);
 //        byteBuf.writeBytes(bytes);
        // GlobalChannelGroupInstance.writeAndFlush(Unpooled.copiedBuffer(bytes));
@@ -74,13 +100,15 @@ public class nettyWebServerHandler extends SimpleChannelInboundHandler<TextWebSo
     @Override
     public void handlerAdded(ChannelHandlerContext ctx) throws Exception {
         Channel ch = ctx.channel();
-        map.put(ch.id().asLongText(),ch);
+        //map.put(ch.id().asLongText(),ch);
+        WebSocketGroup.getInstance().AddChannel(ch.id().asLongText(),ch);
        // System.out.println(map.toString());
         //GlobalWebChannelGroupInstance.add(ch);
     }
 
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
+
         logger.info(ctx.channel().remoteAddress()+":离开");
     }
 
@@ -99,13 +127,14 @@ public class nettyWebServerHandler extends SimpleChannelInboundHandler<TextWebSo
 
     @Override
     public void handlerRemoved(ChannelHandlerContext ctx) throws Exception {
-/**
- * 根据值 删除key-value
- */
-        Collection<Channel> values = map.values();
-        while (true == values.contains(ctx.channel())){
-            values.remove(ctx.channel());
-        }
+        WebSocketGroup.getInstance().removeChannel(ctx.channel());
+///**
+// * 根据值 删除key-value
+// */
+//        Collection<Channel> values = map.values();
+//        while (true == values.contains(ctx.channel())){
+//            values.remove(ctx.channel());
+//        }
 
     }
 }
